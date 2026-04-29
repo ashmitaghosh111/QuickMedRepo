@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuickMed - Medicine Search</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#005bc1",
+                    "outline-variant": "#c1c6d7",
+                    "on-primary-fixed": "#001a41",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface": "#191c1d",
+                    "on-secondary-container": "#00732a",
+                    "surface-dim": "#d9dadb",
+                    "tertiary-container": "#e2241f",
+                    "surface": "#f8f9fa",
+                    "inverse-primary": "#adc6ff",
+                    "secondary": "#006e28",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#fffbff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-container-high": "#e7e8e9",
+                    "error-container": "#ffdad6",
+                    "on-background": "#191c1d",
+                    "on-surface-variant": "#414755",
+                    "on-primary-container": "#fefcff",
+                    "secondary-fixed": "#72fe88",
+                    "surface-bright": "#f8f9fa",
+                    "on-secondary-fixed": "#002107",
+                    "background": "#f8f9fa",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "on-secondary-fixed-variant": "#00531c",
+                    "primary": "#0058bc",
+                    "tertiary-fixed": "#ffdad5",
+                    "primary-container": "#0070eb",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#53e16f",
+                    "outline": "#717786",
+                    "on-tertiary-fixed-variant": "#930005",
+                    "secondary-container": "#6ffb85",
+                    "primary-fixed": "#d8e2ff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#bc000a",
+                    "on-tertiary-fixed": "#410001",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2e3132",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-container-highest": "#e1e3e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- Top AppBar (from JSON) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-slate-50/80 backdrop-blur-md shadow-[0_8px_24px_rgba(0,88,188,0.08)] rounded-b-[2rem]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-600">location_on</span>
+<span class="font-manrope font-bold text-lg tracking-tight text-on-surface">Kolkata, WB</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border-2 border-white shadow-sm">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="close up headshot of a smiling young professional man with a friendly expression in a clean studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPaczKxr65z535hlvjmpiSzyUe6WR32BXU7eAPa4kRvBZ4cLIt0D-Cxt0HDhVZ2g-08LVDJWKSouMi--AE_2N1-OdqchbdEOmwEq75M2VOmGW8Rp994axdxQGstgvpUJc2HhPiQmz0PxghtLUNQ9LpO6ciSYCutjXvbwVniMNrrGu_vxgtakyWP3693DC4V961N6swM2q-htjrDONPWBh16J0qKgedv2PI0buSYbeVqVi7je3h6IVTegsOm7p1nusc-RKDXyH-DY4"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto">
+<!-- Search Section -->
+<section class="mb-8">
+<div class="mb-2">
+<h1 class="text-3xl font-extrabold text-blue-700 tracking-tight">QuickMed</h1>
+<p class="text-on-surface-variant text-sm font-medium">Find your wellness essentials</p>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-outline">search</span>
+</div>
+<input class="w-full bg-surface-container-high border-none h-14 pl-12 pr-4 rounded-xl focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline font-medium" placeholder="Search for medicines..." type="text"/>
+</div>
+</section>
+<!-- Prescription Upload Action -->
+<section class="mb-10">
+<div class="bg-gradient-to-br from-secondary to-on-secondary-fixed-variant p-6 rounded-lg flex items-center justify-between shadow-lg shadow-secondary/20">
+<div class="text-white">
+<h3 class="font-headline font-bold text-lg leading-tight">Got a prescription?</h3>
+<p class="text-secondary-fixed/80 text-sm mt-1">Upload and let us handle the rest</p>
+</div>
+<button class="bg-white text-secondary px-6 py-3 rounded-xl font-bold flex items-center gap-2 hover:scale-95 transition-transform">
+<span class="material-symbols-outlined text-xl">camera</span>
+<span>Upload Prescription</span>
+</button>
+</div>
+</section>
+<!-- Categories / Quick Filters (Bento Style) -->
+<section class="grid grid-cols-2 gap-4 mb-10">
+<div class="bg-surface-container-low p-5 rounded-lg flex flex-col justify-between h-32 border border-transparent hover:border-secondary-fixed transition-all cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-3xl">pill</span>
+<span class="font-headline font-bold text-on-surface">Tablets</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-lg flex flex-col justify-between h-32 border border-transparent hover:border-secondary-fixed transition-all cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-3xl">medication</span>
+<span class="font-headline font-bold text-on-surface">Syrups</span>
+</div>
+</section>
+<!-- Medicine List -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-xl font-bold font-headline text-on-surface">Common Medicines</h2>
+<button class="text-primary text-sm font-semibold">View All</button>
+</div>
+<div class="space-y-4">
+<!-- Medicine Item 1 -->
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container-high">
+<div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="close up of a white medicine bottle with professional pharmaceutical labeling on a clean white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5uAjIit2vmLD_a5GPvzvktIlnuWZuOM73w55pcZVKstMn55s1wrA-EPbpfBSA_z6YUOX5NUdWKTrAnT9bZ4DVAbp4lgo9P-Qpqax9AczZKXntoCRE9yZ9bHyWJSBmS9gwmDG75Mr0vRIcvttwnA7f6n--5yIRgkET_FhkvuPr9kYoOUtAFqM2Fm1IjLVQZQ5QctVTNiz0xrBzbDImpVgYQLjtGRByg6MsfCsuA8u3aFtR8SqMZKadcP8jdKZDMU-JxVGQQm6C9_g"/>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-on-surface">Paracetamol 500mg</h4>
+<p class="text-xs text-on-surface-variant">Strip of 15 Tablets</p>
+<div class="mt-1 flex items-baseline gap-1">
+<span class="text-sm font-semibold">₹</span>
+<span class="text-lg font-bold text-on-surface">42</span>
+</div>
+</div>
+<button class="bg-primary text-white h-10 px-4 rounded-full font-bold text-sm flex items-center gap-1 hover:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+                        Add
+                    </button>
+</div>
+<!-- Medicine Item 2 -->
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container-high">
+<div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="pharmaceutical blister pack with round white pills arranged neatly against a soft grey background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy31cJ-_No2JBy90UJv0od-0O9vaQh74jIdVG7cVMpHxP77lkVOzhz3F6gAAfIlXNQzGtqiFdTQnwvLr5vIJvuJTBLCfU_ckSH_20bWMNgVMNVNKnItITBuYow-aU3Xb2xq48WbFreq2ehlddJwnCouyW6PIMGlHeOGYMDxhM4Qq_atlHKYcNuVS6rOEjdQbFzVA931atmvH-Tor6gkAgFaVKOJfwlmlsOWJ4kxUSHOinPasgBwfCRQdX4kDQEMGTonBI-1IYA9oM"/>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-on-surface">Amoxicillin 250mg</h4>
+<p class="text-xs text-on-surface-variant">Strip of 10 Capsules</p>
+<div class="mt-1 flex items-baseline gap-1">
+<span class="text-sm font-semibold">₹</span>
+<span class="text-lg font-bold text-on-surface">120</span>
+</div>
+</div>
+<button class="bg-primary text-white h-10 px-4 rounded-full font-bold text-sm flex items-center gap-1 hover:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+                        Add
+                    </button>
+</div>
+<!-- Medicine Item 3 -->
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container-high">
+<div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="clear glass bottle of amber colored medicinal syrup with a silver cap on a clinical background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSHTFBzfKxctfxINzOdY3xZrVDls7o5a04o5sAyDfKHYKMGty6akM4seatvbAYu2STciXET_5aSWI4N-XfeUxNIxgzcJ9C4Tp5JzyoTlaegaJkON7anSKqzUz6LKI8y3krjyQCu7VsQOdzEEy3ohfySmEG90iC7_P7Vz6mhbhFy6dwnUB-PEIQHb1LjnBadqHmHqI7CnKyx40YaEr8PGzX9h0m9StAQBwrTymKs_2YUpaM0u1-0T4QdRdhHjWoZ9YS7KLeYcQIpYc"/>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-on-surface">Cough Reliever</h4>
+<p class="text-xs text-on-surface-variant">100ml Bottle</p>
+<div class="mt-1 flex items-baseline gap-1">
+<span class="text-sm font-semibold">₹</span>
+<span class="text-lg font-bold text-on-surface">85</span>
+</div>
+</div>
+<button class="bg-primary text-white h-10 px-4 rounded-full font-bold text-sm flex items-center gap-1 hover:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+                        Add
+                    </button>
+</div>
+<!-- Medicine Item 4 -->
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center gap-4 transition-all hover:bg-surface-container-high">
+<div class="w-16 h-16 bg-white rounded-lg flex items-center justify-center p-2">
+<img class="w-full h-full object-contain" data-alt="macro photography of colorful gelatin capsules scattered on a clean reflective white surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv4CDhqCRKoBTMQKrar0bjffncgQ_1zbhfXJeuYhs9WkvqwjVpM8tMUMEeQXofjKWL309zDG_toLuSaCbxO9PIQbaoYOSbAESLsNxVCxypHBEGuotS14aekGTpu1ebXzUEDsr2KM0xthvOJhsZa2NSDkf30s0gjtwBgvm_aem-Mazdb2ipxomO84r-VZgaOx3BZDittD7KYOdzCXdFP9Gd_wszsFtYw7aAF5JD6j7drxLxmVrbhGaqmBzs7lbJzDAtM5dLj9tKwM8"/>
+</div>
+<div class="flex-1">
+<h4 class="font-headline font-bold text-on-surface">Vitamin B12 Multi</h4>
+<p class="text-xs text-on-surface-variant">Bottle of 30 Gummies</p>
+<div class="mt-1 flex items-baseline gap-1">
+<span class="text-sm font-semibold">₹</span>
+<span class="text-lg font-bold text-on-surface">350</span>
+</div>
+</div>
+<button class="bg-primary text-white h-10 px-4 rounded-full font-bold text-sm flex items-center gap-1 hover:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+                        Add
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (from JSON) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 backdrop-blur-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.04)] rounded-t-[2.5rem]">
+<!-- Home (Inactive) -->
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:text-blue-500 transition-all">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide mt-1">Home</span>
+</div>
+<!-- Search (Active - This is a Search Screen) -->
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-blue-600 to-blue-500 text-white rounded-full px-5 py-2 scale-110 shadow-lg shadow-blue-200/50 dark:shadow-blue-900/20">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide">Search</span>
+</div>
+<!-- Orders (Inactive) -->
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:text-blue-500 transition-all">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide mt-1">Orders</span>
+</div>
+<!-- Profile (Inactive) -->
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:text-blue-500 transition-all">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide mt-1">Profile</span>
+</div>
+</nav>
+<!-- Floating Action Button (Only for relevant screens) -->
+<div class="fixed bottom-24 right-6">
+<button class="w-14 h-14 bg-tertiary-container text-white rounded-full shadow-2xl flex items-center justify-center active:scale-95 duration-150 shadow-tertiary/30">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">emergency</span>
+</button>
+</div>
+</body></html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#005bc1",
+                    "outline-variant": "#c1c6d7",
+                    "on-primary-fixed": "#001a41",
+                    "tertiary-fixed-dim": "#ffb4aa",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface": "#191c1d",
+                    "on-secondary-container": "#00732a",
+                    "surface-dim": "#d9dadb",
+                    "tertiary-container": "#e2241f",
+                    "surface": "#f8f9fa",
+                    "inverse-primary": "#adc6ff",
+                    "secondary": "#006e28",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#fffbff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#004493",
+                    "surface-container-high": "#e7e8e9",
+                    "error-container": "#ffdad6",
+                    "on-background": "#191c1d",
+                    "on-surface-variant": "#414755",
+                    "on-primary-container": "#fefcff",
+                    "secondary-fixed": "#72fe88",
+                    "surface-bright": "#f8f9fa",
+                    "on-secondary-fixed": "#002107",
+                    "background": "#f8f9fa",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#edeeef",
+                    "on-secondary-fixed-variant": "#00531c",
+                    "primary": "#0058bc",
+                    "tertiary-fixed": "#ffdad5",
+                    "primary-container": "#0070eb",
+                    "surface-container-low": "#f3f4f5",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#53e16f",
+                    "outline": "#717786",
+                    "on-tertiary-fixed-variant": "#930005",
+                    "secondary-container": "#6ffb85",
+                    "primary-fixed": "#d8e2ff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary": "#bc000a",
+                    "on-tertiary-fixed": "#410001",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2e3132",
+                    "primary-fixed-dim": "#adc6ff",
+                    "surface-container-highest": "#e1e3e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen pb-32">
+<!-- Top App Bar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_8px_24px_rgba(0,88,188,0.08)] rounded-b-[2rem]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-600 dark:text-blue-400" data-icon="location_on">location_on</span>
+<span class="font-manrope font-bold text-lg tracking-tight text-on-surface">Kolkata, WB</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border-2 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="professional headshot of a smiling young man in a clean white studio setting with soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV4NMi63lZb4s5-kff2H1qWkonH7pSiDU02bOQ67BGAXdqup4tIgol5TQc-Saff409iNDU-BY4MB50BsNXqqQn4_a1TsV5RA5DZ3k-mIddcfn3WIyX5Fap2SOyN0uqqH46FWgeXdgtePubnemRa_cpVyiSHjCjpTob_13xwfT9-tu5xtCt73CbAtyMQOVGj4R6j3a44bar6H0AH_wfuf2WJMu9rAjealysWphADCwZ90MEgGFqWQtV9vzHuqTuu7vaS6a-KOGBHaI"/>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Express Delivery Section -->
+<section class="relative overflow-hidden bg-gradient-to-br from-primary to-primary-container rounded-lg p-8 shadow-[0_20px_40px_rgba(0,88,188,0.15)] text-on-primary">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-6 relative z-10">
+<div class="space-y-2">
+<span class="inline-block px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full text-xs font-bold tracking-widest uppercase">QuickMed Flash</span>
+<h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">Express Delivery in 10 Minutes</h1>
+<p class="text-on-primary-container/80 font-medium">Your medical sanctuary is on its way.</p>
+</div>
+<div class="flex items-center justify-center w-24 h-24 bg-white/10 backdrop-blur-md rounded-full border border-white/20">
+<div class="text-center">
+<span class="block text-2xl font-bold leading-none">09:52</span>
+<span class="text-[10px] uppercase tracking-tighter opacity-70">mins left</span>
+</div>
+</div>
+</div>
+<!-- Abstract background shape -->
+<div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/5 rounded-full blur-3xl"></div>
+</section>
+<!-- Delivery Personnel Bento Card -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="md:col-span-2 bg-surface-container-low rounded-lg p-6 flex items-center gap-6">
+<div class="relative">
+<div class="w-16 h-16 rounded-2xl bg-surface-container-highest overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="friendly delivery professional wearing a clean uniform and helmet smiling warmly" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfIg3cIX7-yA3zIv559I6q4hqDIcDZUcJpBYXQqK7BvBp5thsPboedfZAdK5O8NAuztvBSXUqQjc9ftrOVWXRjtgwVBUzukG-XVJTrczVOO1tLaN9KuLjKIyRcFcQFMC6GWLOgsKAQrFkuQcxU6td3NsQCtLT-3iOMpRSPOofTWy0v1qyNGEU5yjo2pobAwC69kQd7HALACx3rD7S0oPuquG4NlwE34rB1Y0jecRBdnFzKCJSW8xMEGJv1WcRAxkczdqT9BSBq-U4"/>
+</div>
+<div class="absolute -bottom-2 -right-2 w-8 h-8 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center border-4 border-surface-container-low">
+<span class="material-symbols-outlined text-xs" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-bold text-on-surface">Arjun Sharma</h3>
+<p class="text-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="electric_bolt">electric_bolt</span> 
+                        Top-rated Delivery Partner
+                    </p>
+</div>
+</div>
+<div class="bg-surface-container-highest rounded-lg p-6 flex flex-col items-center justify-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="phone_in_talk">phone_in_talk</span>
+<span class="text-sm font-semibold text-primary">Call Arjun</span>
+</div>
+</div>
+<!-- Map Section (Asymmetric) -->
+<div class="w-full h-48 bg-surface-container-low rounded-lg overflow-hidden relative group">
+<div class="absolute inset-0 bg-slate-200" data-location="Kolkata" style="">
+<img class="w-full h-full object-cover" data-alt="minimalist clean digital map showing city streets with a blue glowing path and a pulsing location pin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEeMiU8UiYAEBimCjjYzjZ1BzEcdtuqWZ-c8KWgdz0WWvT1oQVN-MOuQ9n41NtnGHsZEzyL32odzs42kMxGdODFNa5DxzkAcBEyWh6fz0kOQTEOv25Hu2et6DIx_bYWakXSG1dYsnJQ1grLCXjyLN72zgyEjfO6fbcMB87AN1QQOWzjUFjAq5d12avplIo4yu_sP6Asw2sTMOfOp49cYPbwr_MUyHYwezNcxxXPAlnvNnc_npR_ss57SiocYcbYPEe-4WGC8L27OY"/>
+</div>
+<div class="absolute top-4 left-4 bg-white/90 backdrop-blur shadow-sm rounded-full px-4 py-2 flex items-center gap-2">
+<div class="w-2 h-2 bg-primary animate-pulse rounded-full"></div>
+<span class="text-xs font-bold text-on-surface">Live Tracking</span>
+</div>
+</div>
+<!-- Order Summary -->
+<section class="space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold text-on-surface">Order Summary</h2>
+<span class="text-sm font-medium text-primary bg-primary-fixed px-3 py-1 rounded-full">3 Items</span>
+</div>
+<div class="bg-surface-container-low rounded-lg overflow-hidden divide-y divide-outline-variant/10">
+<div class="p-4 flex justify-between items-center bg-surface-container-highest/50">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="medication">medication</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Paracetamol 500mg</p>
+<p class="text-xs text-on-surface-variant">Strip of 10 tablets</p>
+</div>
+</div>
+<p class="font-bold text-on-surface">₹42.50</p>
+</div>
+<div class="p-4 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="medical_services">medical_services</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">N95 Face Masks</p>
+<p class="text-xs text-on-surface-variant">Pack of 5</p>
+</div>
+</div>
+<p class="font-bold text-on-surface">₹249.00</p>
+</div>
+<div class="p-4 flex justify-between items-center">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="sanitizer">sanitizer</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Hand Sanitizer</p>
+<p class="text-xs text-on-surface-variant">200ml Bottle</p>
+</div>
+</div>
+<p class="font-bold text-on-surface">₹95.00</p>
+</div>
+</div>
+<!-- Totals -->
+<div class="bg-surface-container-low rounded-lg p-6 space-y-3">
+<div class="flex justify-between text-on-surface-variant text-sm font-medium">
+<span>Subtotal</span>
+<span>₹386.50</span>
+</div>
+<div class="flex justify-between text-on-surface-variant text-sm font-medium">
+<span>Delivery Fee</span>
+<span class="text-secondary font-bold">FREE</span>
+</div>
+<div class="pt-3 border-t border-outline-variant/10 flex justify-between items-center">
+<span class="text-lg font-bold text-on-surface">Total Amount</span>
+<span class="text-2xl font-extrabold text-primary tracking-tight">₹386.50</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Sticky Footer CTA -->
+<div class="fixed bottom-[88px] left-0 w-full px-6 z-40 md:static md:px-0 md:mt-8 md:max-w-2xl md:mx-auto">
+<button class="w-full bg-gradient-to-r from-secondary to-on-secondary-container text-white py-5 rounded-xl font-bold text-lg shadow-xl shadow-secondary/20 hover:scale-[0.98] transition-transform flex items-center justify-center gap-3">
+<span class="material-symbols-outlined" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+            Confirm Order
+        </button>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/90 dark:bg-slate-950/90 backdrop-blur-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.04)] rounded-t-[2.5rem]">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:text-blue-500 dark:hover:text-blue-300 transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:text-blue-500 dark:hover:text-blue-300 transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="search">search</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide">Search</span>
+</div>
+<!-- ACTIVE TAB: Orders -->
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-blue-600 to-blue-500 text-white rounded-full px-5 py-2 scale-110 shadow-lg shadow-blue-200/50 dark:shadow-blue-900/20 cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_bag" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide">Orders</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:text-blue-500 dark:hover:text-blue-300 transition-all cursor-pointer">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-semibold tracking-wide">Profile</span>
+</div>
+</nav>
+</body></html>
