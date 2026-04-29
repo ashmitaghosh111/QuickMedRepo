@@ -72,6 +72,9 @@ QuickMed aims to reduce these delays by offering a **centralized digital solutio
     -> *https://drive.google.com/drive/folders/1NUAuDHrDIOMf2ue3fSSd3vQsd-rwEf7Z?usp=drive_link*  
 
 
+- 💻 **Live Application:**  
+  *(https://emergency-aid--AshmitaG.replit.app)*  
+
 - 📄 **Documentation:**  
   *->PDRE Assignment - Ashmita Ghosh*  
 
